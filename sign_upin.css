@@ -1,0 +1,29 @@
+body {
+    background-color: #34a1eb;
+}
+form {
+    background-color: #ffffff;
+    border-radius: 30px;
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+}
+input {
+    border-radius: 4px;
+}
+label {
+    line-height: 50px;
+}
+#Email {
+    width: 500px;
+}
+#password {
+    width: 500px;
+}
+h1 {
+    text-align: center;
+}
