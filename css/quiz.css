@@ -1,0 +1,17 @@
+#abc {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 40px;
+    width: 190px;
+    margin: 0 auto;
+}
+
+div:first-child {
+    border: 1px solid red;
+    width: 100px;
+}
+
+.def {
+    color: #0000ff;
+}
+
