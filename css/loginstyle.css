@@ -1,0 +1,23 @@
+form.back-form {
+  background-color: #98fb98;
+  border: 1px solid #000;
+  border-radius: 10px;
+  height: 600px;
+  width: 700px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.login {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
