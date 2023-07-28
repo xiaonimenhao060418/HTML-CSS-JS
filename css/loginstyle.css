@@ -1,5 +1,9 @@
+body {
+  background-color: #6a5acd;
+}
+
 form.back-form {
-  background-color: #98fb98;
+  background-color: #ffffff;
   border: 1px solid #000;
   border-radius: 10px;
   height: 600px;
@@ -14,10 +18,23 @@ h1.welcome {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 30px auto 50px;
 }
 
-div.login {
+label.label {
+  box-sizing: border-box;
+  display: block;
+  margin-top: 15px;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+input.id {
+  width: 400px;
+  height: 50px;
+}
+
+input.password {
+  width: 400px;
+  height: 50px;
 }
