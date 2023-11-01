@@ -1,0 +1,1403 @@
+* {
+  letter-spacing: -0.03em;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p,
+form,
+fieldset,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+#wrap {
+  position: relative;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+/* header--start */
+.pc {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  z-index: 100;
+}
+
+header .logo {
+  position: absolute;
+  left: 50px;
+  top: 21px;
+  width: 104px;
+  height: 19px;
+  z-index: 1;
+}
+
+header .logo a {
+  display: block;
+  background: url(/img/logo-kolon-color.png) 0 0/ 104px auto no-repeat;
+  height: 100%;
+}
+header nav {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+
+header nav::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: 100%;
+  height: 1px;
+  background-color: #ededed;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gnb_w {
+  display: inline;
+  height: 100%;
+  text-align: center;
+}
+
+.gnb {
+  height: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gnb li a {
+  height: 60px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 0 21px;
+  white-space: nowrap;
+}
+
+.header_lang_area {
+  width: 24px;
+  height: 60px;
+  position: absolute;
+  right: 135px;
+  top: 0;
+}
+
+.header_lang_area .btn_lang_cho {
+  display: block;
+  background-image: url(https://www.kolon.com/common/kr/images/btn-gnb-lang-menu.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.header_lang_area .lang_w {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%);
+  padding: 19px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #293148;
+}
+
+.lang_w .lang_list_on_no_letterspacing {
+  color: #000;
+  margin-top: 0;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+
+.lang_w .lang_list_no_letterspacing {
+  display: block;
+  margin-top: 12px;
+  color: #c7c7c7;
+  font-size: 14px;
+  text-align: center;
+}
+
+.header_srch_area {
+  width: 24px;
+  height: 60px;
+  position: absolute;
+  right: 90px;
+  z-index: 1;
+}
+
+.header_srch_area .btn_srch_btn_top_srch {
+  display: block;
+  background-image: url(https://www.kolon.com/common/kr/images/btn-gnb-search-menu.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+}
+
+header .header_srch_pop_area {
+  position: absolute;
+  left: 0;
+  top: -400px;
+  padding: 85px 0 80px;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  transition: top 0.5s ease;
+}
+
+.header_srch_pop_area .inner_dimd {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.header_srch_pop_area .srch_inner {
+  margin: 0 auto;
+  width: 760px;
+}
+
+.header_srch_pop_area .srch_inner .form_search {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.header_srch_pop_area .srch_inner .form_search input {
+  padding-left: 24px;
+  height: 60px;
+  border-radius: 30px;
+  font-size: 20px;
+  width: 100%;
+  padding-right: 85px;
+  color: #000;
+  line-height: 48px;
+  border: none;
+  background: #f7f7f7;
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+
+.input_btn_wrap {
+  position: absolute;
+  right: 24px;
+  top: 32%;
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.form_search .btn_delete {
+  display: none;
+  width: 20px;
+  height: 20px;
+  background: url(https://www.kolon.com/common/kr/images/btn-input-delete.svg) no-repeat center center;
+  margin-right: 16px;
+}
+
+.form_search .btn_search {
+  width: 24px;
+  height: 24px;
+  background-size: auto auto;
+  background: url(https://www.kolon.com/common/kr/images/btn-gnb-search-menu.svg) no-repeat center center;
+}
+
+.recommend_keyword_area {
+  padding: 0 24px;
+  margin-top: 40px;
+}
+
+.recommend_keyword_area .keyword_title {
+  margin-bottom: 8px;
+  color: #000;
+  font-size: 16px;
+}
+
+.recommend_keyword_area .keyword_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recommend_keyword_area .keyword_wrap .keyword_list_btn_key_word {
+  margin-right: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+.recommend_keyword_area .keyword_wrap .keyword_list:last-child {
+  margin-right: 0;
+}
+
+.subsidiary_site_area {
+  width: 24px;
+  height: 60px;
+  position: absolute;
+  right: 47px;
+  top: 0;
+}
+
+.subsidiary_site_area a {
+  display: block;
+  background-image: url(https://www.kolon.com/common/kr/images/btn-open-subsidiary.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+}
+
+.subsidiary_list_popup {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 200;
+  transition: left 0.7s ease;
+}
+
+.subsidiary_list_popup .inner_dimd {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.subsidiary_list_popup .for_bg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15% 10%;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.subsidiary_list_popup .for_bg .list_w {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  min-height: 550px;
+}
+
+.subsidiary_list_popup .for_bg .list_w .subsidiary_list {
+  margin-bottom: 20px;
+  padding-right: 30px;
+  width: calc(100% / 3);
+  color: #c7c7c7;
+  font-size: 48px;
+  transition: color 0.3s ease;
+}
+
+.subsidiary_list_popup .for_bg .list_w .subsidiary_list:hover {
+  color: #000;
+}
+
+.subsidiary_list_popup .btn_close_subsidiary {
+  position: absolute;
+  right: 80px;
+  top: 80px;
+  width: 24px;
+  height: 24px;
+  background: url(https://www.kolon.com/common/kr/images/btn-close-x.svg) center center no-repeat;
+}
+/* //header--end */
+/* main--start */
+.inner {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main_title_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 140px;
+}
+
+.main_content {
+  position: relative;
+  margin: 30px 0 100px;
+  padding-right: 306px;
+}
+
+.main_title {
+  font-size: 42px;
+  line-height: 1.33;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.main_title_area .main_recommend_txt_area {
+  display: flex;
+  align-items: center;
+}
+
+.main_recommend_txt_area p {
+  font-size: 14px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.keyword_swiper {
+  border: 2px solid #f0f0f0;
+  width: 204px;
+  height: 52px;
+  border-radius: 26px;
+  display: flex;
+  align-items: center;
+}
+
+.keyword_swiper_slide {
+  padding: 0 18px;
+}
+
+.main_issue_card {
+  position: relative;
+  height: 1087px;
+  width: 888px;
+}
+
+.grid_item_grid_item--width2_grid_item--height2 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 582px;
+  height: 582px;
+  box-sizing: border-box;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.grid_item_grid_item--width2_grid_item--height2:hover .img_area {
+  transform: scale(1.1);
+}
+
+.main_issue_card .grid_item_grid_item--width2_grid_item--height2 .img_area {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: 0.4s transform ease;
+}
+
+.grid_item_grid_item--width2_grid_item--height2 .text_area {
+  font-size: 18px;
+  width: 407.391px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 30px 30px;
+  color: #fff;
+}
+
+.grid_item_grid_item--width2_grid_item--height2 .text_area .category {
+  margin-bottom: 10px;
+  font-size: 14px;
+  letter-spacing: -0.42px;
+}
+
+.grid_item_grid_item--width2_grid_item--height2 .text_area .list_title_no_lettercpacing {
+  font-size: 28px;
+  line-height: 1.37;
+}
+
+.grid_item_grid_item--width2_grid_item--height2 .text_area .recommend_txt_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.grid_item_grid_item--width2_grid_item--height2 .text_area .recommend_txt_wrap .keywords {
+  margin-right: 0;
+  font-size: 14px;
+}
+
+.main_issue_card .grid_item_no_letterspacing {
+  position: absolute;
+  left: 610px;
+  top: 0;
+  display: block;
+  width: 276px;
+  height: 276px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  isolation: isolate;
+}
+
+.main_issue_card .grid_item_no_letterspacing:hover .img_area {
+  transform: scale(1.1);
+}
+
+.main_issue_card .grid_item_no_letterspacing .img_area::after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000);
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.5;
+}
+
+.main_issue_card .grid_item_no_letterspacing .img_area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: transform ease 0.4s;
+}
+
+.main_issue_card .grid_item_no_letterspacing .text_area {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 76%;
+  padding: 0 20px 20px;
+  color: #fff;
+}
+
+.main_issue_card .grid_item_no_letterspacing .text_area .category {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.main_issue_card .grid_item_no_letterspacing .text_area .list_title_no_lettercpacing {
+  font-size: 16px;
+  line-height: 1.37;
+}
+
+.main_issue_card .grid_item_no_letterspacing .text_area .recommend_txt_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.main_issue_card .grid_item_no_letterspacing .text_area .keyword {
+  margin-right: 0;
+  font-size: 14px;
+}
+
+.main_issue_card .grid_item_no_dimd_list {
+  position: absolute;
+  left: 610px;
+  top: 306px;
+  display: block;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 14px;
+  isolation: isolate;
+  width: 276px;
+  height: 276px;
+}
+
+.main_issue_card .grid_item_no_dimd_list:hover .img_area {
+  transform: scale(1.1);
+}
+
+.main_issue_card .grid_item_no_dimd_list .img_area::after {
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000); */
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.5;
+}
+
+.main_issue_card .grid_item_no_dimd_list .img_area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: transform ease 0.4s;
+}
+
+.main_issue_card .grid_item_no_dimd_list .text_area {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 76%;
+  padding: 0 20px 20px;
+  color: #000;
+}
+
+.main_issue_card .grid_item_no_dimd_list .text_area .category {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.main_issue_card .grid_item_no_dimd_list .text_area .list_title_no_lettercpacing {
+  font-size: 16px;
+  line-height: 1.37;
+}
+
+.main_issue_card .grid_item_grid_item--width3 {
+  position: absolute;
+  left: 0px;
+  top: 612px;
+  width: 888px;
+  height: 445px;
+  display: block;
+  margin-bottom: 30px;
+  border-radius: 14px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.main_issue_card .grid_item_grid_item--width3:hover .img_area {
+  transform: scale(1.1);
+}
+
+.main_issue_card .grid_item_grid_item--width3 .img_area::after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000);
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.5;
+}
+
+.main_issue_card .grid_item_grid_item--width3 .img_area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: transform ease 0.4s;
+}
+
+.main_issue_card .grid_item_grid_item--width3 .text_area {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 30px 30px;
+  width: 48%;
+  color: #fff;
+}
+
+.main_issue_card .grid_item_grid_item--width3 .text_area .list_title {
+  font-size: 28px;
+  line-height: 1.37;
+}
+
+.main_content .main_quick_card_list_w {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 23%;
+}
+
+.main_content .main_quick_card_list_w .card_list_esg_management {
+  background-image: url(https://www.kolon.com/common/kr/images/icon-main-quick-esg-bg.png);
+  background-size: 228px;
+  background-position: 140px 190px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 30px 20px;
+  width: 276px;
+  height: 400px;
+  color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #0078c3;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.main_content .main_quick_card_list_w .card_list_esg_management .top_area {
+  width: 100%;
+}
+
+.main_content .main_quick_card_list_w .card_list_esg_management .top_area .category_no_letterspacing {
+  font-size: 14px;
+}
+
+.main_content .main_quick_card_list_w .card_list_esg_management .top_area .list_title_no_lettercpacing {
+  margin-top: 10px;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.main_content .main_quick_card_list_w .card_list_esg_management .bot_area {
+  width: 100%;
+}
+
+.main_content .main_quick_card_list_w .card_list_esg_management .color_btn_black {
+  padding: 0 18px 2px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.main_content .main_quick_card_list_w .card_list_esg_management .color_btn_black span {
+  font-size: 12px;
+  color: #0078c3;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+}
+
+.main_content .main_quick_card_list_w .card_list_employment_information {
+  background-image: url(https://www.kolon.com/common/kr/images/icon-main-quick-recruit-bg.png);
+  background-size: 240px;
+  background-position: 160px 220px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 30px 20px;
+  width: 276px;
+  height: 400px;
+  color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #0078c3;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.main_content .main_quick_card_list_w .card_list_employment_information .top_area {
+  width: 100%;
+}
+
+.main_content .main_quick_card_list_w .card_list_employment_information .top_area .category {
+  font-size: 14px;
+}
+
+.main_content .main_quick_card_list_w .card_list_employment_information .top_area .list_title_no_lettercpacing {
+  margin-top: 10px;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.main_content .main_quick_card_list_w .card_list_employment_information .bot_area {
+  width: 100%;
+}
+
+.main_content .main_quick_card_list_w .card_list_employment_information .bot_area .sub_txt_no_letterspacing {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.main_content .main_quick_card_list_w .card_list_employment_information .bot_area .border_btn {
+  padding: 0 18px 2px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.main_content .main_quick_card_list_w .card_list_employment_information .bot_area .border_btn span {
+  color: #0078c3;
+  font-size: 12px;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+}
+
+.main_content .main_quick_card_list_w .card_list_stock_information {
+  height: auto;
+  border: 2px solid#f7f7f7;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 30px 20px;
+  width: 276px;
+  color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.main_content .main_quick_card_list_w .card_list_stock_information .top_area {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  width: auto;
+}
+
+.main_content .main_quick_card_list_w .card_list_stock_information .top_area .category {
+  color: #000;
+  font-size: 14px;
+}
+
+.main_content .main_quick_card_list_w .card_list_stock_information .top_area .main_stock_swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+}
+
+.main_stock_swiper .swiper_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.main_stock_swiper .swiper_wrapper .swiper_slide {
+  width: 232px;
+  height: 100%;
+  position: relative;
+}
+
+.main_stock_swiper .swiper_wrapper .swiper_slide .subsidiary_name {
+  margin: 90px 0 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+.main_stock_swiper .swiper_wrapper .swiper_slide .stock_status_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 0 20px;
+}
+
+.main_stock_swiper .swiper_wrapper .swiper_slide .stock_status_area .left {
+  display: flex;
+  align-items: flex-end;
+}
+
+.main_stock_swiper .swiper_wrapper .swiper_slide .stock_status_area .left .stock_price_no_letterspacing {
+  position: relative;
+  top: 5px;
+  font-size: 38px;
+  color: #000;
+}
+
+.main_stock_swiper .swiper_wrapper .swiper_slide .stock_status_area .left .unit {
+  position: relative;
+  bottom: 3px;
+  margin-left: 4px;
+  font-size: 16px;
+}
+
+.main_stock_swiper .swiper_wrapper .swiper_slide .stock_status_area .right .fluctuation_plus_no_letterspacing {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  color: #999;
+}
+
+.main_stock_swiper .swiper_wrapper .swiper_slide .stock_status_area .right .fluctuation_plus_no_letterspacing::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 12px;
+  height: 10px;
+  background: url(https://www.kolon.com/common/kr/images/icon-stock-minus.svg) 0 0 no-repeat;
+  font-size: 14px;
+  color: #999;
+}
+
+.main_stock_swiper .swiper_wrapper .swiper_button_next {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -6px;
+  margin-top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://www.kolon.com/common/kr/images/btn-main-swiper-arrow-next.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.main_stock_swiper .swiper_wrapper .swiper_button_prev {
+  position: absolute;
+  top: -6px;
+  margin-top: 0;
+  left: auto;
+  right: 32px;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://www.kolon.com/common/kr/images/btn-main-swiper-arrow-prev.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_list_stock_information .btn_area .color_btn_black {
+  background-color: #000;
+  padding: 0 18px 2px;
+  height: 30px;
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.card_list_stock_information .btn_area .color_btn_black span {
+  color: #fff;
+  font-size: 12px;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+}
+
+.main_content .main_quick_card_list_w .card_list_main_biz_feed {
+  background-image: url(https://www.kolon.com/common/kr/images/icon-main-quick-main-biz-bg.png);
+  background-size: 228px;
+  background-position: 140px 220px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 30px 20px;
+  width: 276px;
+  height: 400px;
+  color: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #0078c3;
+  background-repeat: no-repeat;
+  isolation: isolate;
+}
+
+.main_content .main_quick_card_list_w .card_list_main_biz_feed .top_area {
+  width: 100%;
+}
+
+.main_content .main_quick_card_list_w .card_list_main_biz_feed .top_area .category {
+  font-size: 14px;
+}
+
+.main_content .main_quick_card_list_w .card_list_main_biz_feed .top_area .list_title_no_lettercpacing {
+  margin-top: 10px;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.08em;
+}
+
+.main_content .main_quick_card_list_w .card_list_main_biz_feed .bot_area {
+  width: 100%;
+}
+
+.main_content .main_quick_card_list_w .card_list_main_biz_feed .bot_area .color_btn_black {
+  padding: 0 18px 2px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  display: inline-block;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.main_content .main_quick_card_list_w .card_list_main_biz_feed .bot_area .color_btn_black span {
+  font-size: 12px;
+  color: #0078c3;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+}
+
+.new_feed_card_list_w {
+  position: relative;
+  height: 612px;
+}
+
+.new_feed_card_list_w .grid_item {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+  width: 276px;
+  height: 276px;
+  border-radius: 14px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.new_feed_card_list_w .grid_item_no_letterspacing {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+  width: 276px;
+  height: 276px;
+  border-radius: 14px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.new_feed_card_list_w .grid_item_grid_item--width2 {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+  width: 582px;
+  height: 276px;
+  border-radius: 14px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.new_feed_card_list_w .grid_item:hover .img_area {
+  transform: scale(1.1);
+}
+
+.new_feed_card_list_w .grid_item .img_area::after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000);
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.5;
+}
+
+.new_feed_card_list_w .grid_item .img_area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: ease 0.4s;
+}
+
+.new_feed_card_list_w .grid_item_no_letterspacing:hover .img_area {
+  transform: scale(1.1);
+}
+
+.new_feed_card_list_w .grid_item_no_letterspacing .img_area::after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000);
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.5;
+}
+
+.new_feed_card_list_w .grid_item_no_letterspacing .img_area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: ease 0.4s;
+}
+
+.new_feed_card_list_w .grid_item_grid_item--width2:hover .img_area {
+  transform: scale(1.1);
+}
+
+.new_feed_card_list_w .grid_item_grid_item--width2 .img_area::after {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000);
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.5;
+}
+
+.new_feed_card_list_w .grid_item_grid_item--width2 .img_area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: ease 0.4s;
+}
+
+.new_feed_card_list_w .grid_item .txt_area {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 76%;
+  padding: 0 20px 20px;
+  color: #fff;
+}
+
+.new_feed_card_list_w .grid_item .txt_area .category {
+  font-size: 14px;
+}
+
+.new_feed_card_list_w .grid_item .txt_area .list_title {
+  font-size: 16px;
+  line-height: 1.37;
+}
+
+.new_feed_card_list_w .grid_item .txt_area .recommend_txt_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.new_feed_card_list_w .grid_item .txt_area .recommend_txt_wrap .keywords {
+  margin-right: 0;
+  font-size: 14px;
+}
+
+.new_feed_card_list_w .grid_item_no_letterspacing .txt_area {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 76%;
+  padding: 0 20px 20px;
+  color: #fff;
+}
+
+.new_feed_card_list_w .grid_item_no_letterspacing .txt_area .category {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.new_feed_card_list_w .grid_item_no_letterspacing .txt_area .list_title_no_lettercpacing {
+  font-size: 16px;
+  line-height: 1.37;
+}
+
+.new_feed_card_list_w .grid_item_no_letterspacing .txt_area .recommend_txt_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.new_feed_card_list_w .grid_item_no_letterspacing .txt_area .recommend_txt_wrap .keywords {
+  margin-right: 0;
+  font-size: 14px;
+}
+
+.new_feed_card_list_w .grid_item_grid_item--width2 .txt_area {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 76%;
+  padding: 0 20px 20px;
+  color: #fff;
+}
+
+.new_feed_card_list_w .grid_item_grid_item--width2 .txt_area .category {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.new_feed_card_list_w .grid_item_grid_item--width2 .txt_area .list_title {
+  font-size: 16px;
+  line-height: 1.37;
+}
+
+.new_feed_card_list_w .grid_item_grid_item--width2 .txt_area .recommend_txt_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.new_feed_card_list_w .grid_item_grid_item--width2 .txt_area .recommend_txt_wrap .keywords {
+  margin-right: 0;
+  font-size: 14px;
+}
+
+.btn_wrap .color_btn_full {
+  display: block;
+  padding: 11px 32px 14px;
+  text-align: center;
+  border-radius: 25px;
+  background-color: #ebf0f7;
+  border: 1px solid #ebf0f7;
+  transition: all 0.4s ease;
+}
+
+.color_btn_full:hover {
+  background: #dcdfe3;
+  border: 1px solid #dcdfe3;
+}
+
+.btn_wrap .color_btn_full span {
+  padding-right: 23px;
+  color: #000;
+  background: url(https://www.kolon.com/common/kr/images/icon-btn-arrow-down.svg) no-repeat right center;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  height: 20px;
+}
+
+footer {
+  position: relative;
+  padding: 45px 0 30px;
+  background-color: #171717;
+}
+
+footer .inner {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+footer .top_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .top_row .footer_link_area {
+  display: flex;
+  padding-left: 100px;
+  background-image: url(https://www.kolon.com/common/kr/images/logo-kolon-white.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+footer .top_row .footer_link_area .link_personal_info {
+  opacity: 1;
+  margin-right: 32px;
+  color: #fff;
+  font-size: 12px;
+}
+
+footer .top_row .footer_link_area .link {
+  margin-right: 32px;
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+footer .top_row .footer_link_area .link_no_letterspacing {
+  margin-right: 0;
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+footer .select_box_div {
+  position: relative;
+}
+
+footer .select_box_div .open_area {
+  display: flex;
+  align-items: center;
+}
+
+footer .select_box_div .open_area .list_wrap {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #000;
+  border-radius: 14px;
+}
+
+footer .select_box_div .open_area .list_wrap .btn_link {
+  display: block;
+  padding: 5px 20px;
+}
+
+footer .select_box_div .open_area .list_wrap .btn_link span {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+footer .select_box_div .btn_open {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: 175px;
+  height: 39px;
+  background-color: #000;
+  border-radius: 20px;
+}
+
+footer .select_box_div .btn_open::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  width: 20px;
+  height: 20px;
+  background: url(https://www.kolon.com/common/kr/images/icon-select-arr-gray.svg) center center no-repeat;
+  transition: transform 0.2s ease;
+}
+
+footer .select_box_div .btn_open span {
+  color: #fff;
+  font-size: 12px;
+}
+
+footer .bot_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 44px;
+}
+
+footer .bot_row {
+  font-size: 10px;
+  color: #777;
+}
+
+footer .bot_row .footer_sns_w {
+  display: flex;
+  justify-content: content;
+  width: 175px;
+}
+
+footer .bot_row .footer_sns_w .sns_list_youtube {
+  background-image: url(https://www.kolon.com/common/kr/images/icon-footer-sns-youtube.svg);
+  display: block;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+footer .bot_row .footer_sns_w .sns_list_instagram {
+  background-image: url(https://www.kolon.com/common/kr/images/icon-footer-sns-instagram.svg);
+  display: block;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+footer .bot_row .footer_sns_w .sns_list_facebook {
+  background-image: url(https://www.kolon.com/common/kr/images/icon-footer-sns-facebook.svg);
+  display: block;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+footer .bot_row .footer_sns_w .sns_list_blog {
+  background-image: url(https://www.kolon.com/common/kr/images/icon-footer-sns-blog.svg);
+  display: block;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+}
