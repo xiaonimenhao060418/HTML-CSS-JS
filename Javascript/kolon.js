@@ -61,32 +61,37 @@ function btn_srch() {
 //   });
 // }
 
-document.querySelector(".btn_menu").addEventListener("click", function () {
+function btn_menu() {
   const element = document.querySelector(".subsidiary_list_popup");
   const body = document.querySelector("body");
+  const dimd = document.querySelector(".inner_dimd");
 
   if (element.style.left === "100%") {
     element.style.left = "0";
     body.style.overflow = "hidden";
+    dimd.style.display = "block";
   } else {
     element.style.left = "100%";
     body.style.overflow = "visible";
+    dimd.style.display = "none";
   }
-});
+}
 
-// function btn_close() {
-//   const elements = document.querySelectorAll(".subsidiary_list_popup");
-//   const body = document.querySelector("body");
+function btn_close() {
+  const element = document.querySelector(".subsidiary_list_popup");
+  const body = document.querySelector("body");
+  const dimd = document.querySelector(".inner_dimd");
 
-//   elements.forEach(function (element) {
-//     const currentDisplay = window.getComputedStyle(element).getPropertyValue("display");
-
-//     if (currentDisplay === "block") {
-//       element.style.display = "none";
-//       body.style.overflow = "visible";
-//     }
-//   });
-// }
+  if (element.style.left === "0") {
+    element.style.left = "100%";
+    body.style.overflow = "hidden";
+    dimd.style.display = "block";
+  } else {
+    element.style.left = "100%";
+    body.style.overflow = "visible";
+    dimd.style.display = "none";
+  }
+}
 
 const deleteButton = document.querySelector(".btn_delete");
 const inputElement = document.getElementById("frmtopsrcgq");
@@ -109,3 +114,19 @@ function toggleButton() {
 }
 
 toggleButton();
+
+function more_btn() {
+  const elements = document.querySelectorAll(".new_feed_card_list_w_e");
+  const btn_more = document.querySelector(".btn_wrap");
+
+  elements.forEach(function (element) {
+    const currentDisplay = window.getComputedStyle(element).getPropertyValue("display");
+
+    if (currentDisplay === "none") {
+      element.style.display = "block";
+      btn_more.style.display = "none";
+    } else {
+      element.style.display = "none";
+    }
+  });
+}

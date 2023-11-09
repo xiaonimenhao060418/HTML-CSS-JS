@@ -5,13 +5,458 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kolongroup</title>
     <link rel="stylesheet" href="/css/kolon.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="https://www.kolon.com/common/kr/images/favicon.ico" />
+    <style>
+      @media screen and (max-width: 500px) {
+        header .logo {
+          left: 24px;
+          width: 98px;
+          height: 18px;
+        }
+
+        header .logo a {
+          background-image: url(https://www.kolon.com/common/kr/images/logo-kolon-color-mo.svg);
+          background-repeat: no-repeat;
+          background-size: 98px auto;
+          background-position: 0 0;
+        }
+
+        .gnb_w {
+          display: none;
+        }
+
+        .header_lang_area {
+          display: none;
+        }
+
+        .subsidiary_site_area {
+          display: none;
+        }
+
+        .header_srch_area {
+          right: calc(24px + 40px);
+        }
+
+        header .header_srch_area .btn_srch_btn_top_srch {
+          right: 0;
+        }
+
+        header .header_srch_area {
+          top: 0;
+        }
+
+        header .header_srch_area .btn_close_srch_btn_top_srch {
+          display: block;
+          z-index: 1;
+        }
+
+        header .header_srch_pop_area {
+          top: -350;
+        }
+
+        header .header_srch_pop_area .for_bg {
+          position: relative;
+          padding: 110px 0 40px;
+          z-index: 1;
+          background-color: #fff;
+        }
+
+        header .header_srch_pop_area .srch_inner {
+          width: calc(100% - 48px);
+        }
+
+        header .header_srch_pop_area .srch_inner .form_search {
+          position: relative;
+          left: -8px;
+        }
+
+        header .header_srch_pop_area .srch_inner .form_search input {
+          padding-left: 20px;
+          height: 48px;
+          font-size: 16px;
+        }
+
+        header .header_srch_pop_area .srch_inner .form_search .input_btn_wrap .btn_delete {
+          margin-right: 8px;
+        }
+
+        header .header_srch_pop_area .srch_inner .form_search .input_btn_wrap .btn_search {
+          width: 20px;
+          height: 20px;
+        }
+
+        header .header_srch_pop_area .recommend_keyword_area {
+          padding-left: 0;
+        }
+
+        .recommend_keyword_area {
+          padding: 0;
+          margin-top: 20px;
+        }
+
+        .recommend_keyword_area .keyword_title {
+          margin-bottom: 0;
+          font-size: 14px;
+        }
+
+        .recommend_keyword_area .keyword_wrap .keyword_list_btn_key_word {
+          margin-right: 10px;
+          margin-top: 4px;
+        }
+
+        .only_mob_btn_open_mo_menu {
+          display: block;
+          position: absolute;
+          right: 24px;
+          top: 20px;
+          width: 20px;
+          height: 20px;
+          background-image: url(https://www.kolon.com/common/kr/images/btn-open-gnb.svg);
+          background-position: center center;
+          background-repeat: no-repeat;
+          z-index: 1;
+        }
+
+        main {
+          padding-top: 68px;
+        }
+
+        .inner {
+          width: calc(100% - 48px) !important;
+        }
+
+        .main_title_area {
+          width: 100%;
+          position: relative;
+          left: 0;
+        }
+
+        .main_title {
+          font-size: 28px;
+          line-height: 1.42;
+          width: 435px;
+        }
+
+        .only_mobile {
+          display: block;
+        }
+
+        .main_content {
+          margin: 30px auto 100px;
+          padding-right: 0;
+          width: calc(100% + 16px);
+          left: -8px;
+          margin-bottom: 70px;
+        }
+
+        .main_issue_card {
+          width: 100%;
+        }
+
+        .main_issue_card .grid_item_grid_item--width2_grid_item--height2 {
+          height: 451px;
+          width: 100%;
+          margin-bottom: 16px;
+          padding-top: 100%;
+          border-radius: 10px;
+        }
+
+        .main_issue_card .grid_item_grid_item--width2_grid_item--height2 .img_area {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        .main_issue_card .grid_item_grid_item--width2_grid_item--height2 .text_area {
+          padding: 0 20px 20px;
+          width: 100%;
+        }
+
+        .main_issue_card .grid_item_grid_item--width2_grid_item--height2 .text_area .category {
+          margin-bottom: 6px;
+          font-size: 12px;
+        }
+
+        .main_issue_card .grid_item_grid_item--width2_grid_item--height2 .text_area .list_title {
+          font-size: 20px;
+        }
+
+        .main_issue_card .grid_item_grid_item--width2_grid_item--height2 .text_area .recommend_txt_wrap .keywords {
+          font-size: 12px;
+        }
+
+        .main_issue_card .grid_item_no_letterspacing {
+          margin-bottom: 16px;
+          padding-top: 100%;
+          width: 100%;
+          height: 451px;
+          border-radius: 10px;
+          left: 0;
+          top: 467px;
+        }
+
+        .main_issue_card .grid_item_no_letterspacing .img_area {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        .main_issue_card .grid_item_no_letterspacing .text_area {
+          padding: 0 20px 20px;
+          width: 100%;
+        }
+
+        .main_issue_card .grid_item_no_letterspacing .text_area .category {
+          margin-bottom: 6px;
+          font-size: 12px;
+        }
+
+        .main_issue_card .grid_item_no_letterspacing .text_area .list_title {
+          font-size: 20px;
+        }
+
+        .main_issue_card .grid_item_no_letterspacing .text_area .recommend_txt_wrap .keywords {
+          font-size: 12px;
+        }
+
+        .main_issue_card .grid_item_no_dimd_list {
+          margin-bottom: 16px;
+          padding-top: 100%;
+          width: 100%;
+          height: 451px;
+          border-radius: 10px;
+          top: 934px;
+          left: 0;
+        }
+
+        .main_issue_card .grid_item_no_dimd_list .img_area {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        .main_issue_card .grid_item_no_dimd_list .text_area {
+          padding: 0 20px 20px;
+          width: 100%;
+        }
+
+        .main_issue_card .grid_item_no_dimd_list .text_area .category {
+          margin-bottom: 6px;
+          font-size: 12px;
+        }
+
+        .main_issue_card .grid_item_no_dimd_list .text_area .list_title {
+          font-size: 20px;
+        }
+
+        .main_issue_card .grid_item_no_dimd_list .img_area {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        .main_issue_card .grid_item_no_dimd_list .text_area {
+          padding: 0 20px 20px;
+          width: 100%;
+        }
+
+        .main_issue_card .grid_item_no_dimd_list .text_area .list_title {
+          font-size: 20px;
+        }
+
+        .main_issue_card .grid_item_grid_item--width3 {
+          width: 100%;
+          height: 451px;
+          margin-bottom: 0;
+          padding-top: 100%;
+          border-radius: 10px;
+          left: 0;
+          top: 1401px;
+        }
+
+        .main_issue_card .grid_item_grid_item--width3 .img_area {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+
+        .main_content .main_quick_card_list_w {
+          display: block;
+          position: relative;
+          top: 784px;
+          margin-bottom: 30px;
+          width: 100%;
+        }
+
+        .main_content .main_quick_card_list_w .card_list_esg_management {
+          margin-right: 30;
+          width: 100%;
+          height: 200px;
+        }
+
+        .main_content .main_quick_card_list_w .card_list_employment_information {
+          margin-right: 30px;
+          width: 100%;
+          height: 200px;
+        }
+
+        .main_content .main_quick_card_list_w .card_list_stock_information {
+          margin-right: 30px;
+          width: 100%;
+          height: 200px;
+        }
+
+        .main_content .main_quick_card_list_w .card_list_main_biz_feed {
+          margin-right: 30px;
+          width: 100%;
+          height: 200px;
+        }
+
+        .new_feed_card_list_w {
+          top: 774px;
+        }
+
+        .new_feed_card_list_w .grid_item {
+          width: 100%;
+          height: 451px;
+        }
+
+        .new_feed_card_list_w a:nth-of-type(2) {
+          left: 0 !important;
+          top: 467px !important;
+        }
+
+        .new_feed_card_list_w .grid_item_no_letterspacing {
+          left: 0 !important;
+          top: 932px !important;
+          width: 100%;
+          height: 451px;
+        }
+
+        .new_feed_card_list_w a:nth-of-type(4) {
+          left: 0 !important;
+          top: calc(932px + 467px) !important;
+        }
+
+        .new_feed_card_list_w .grid_item_grid_item--width2 {
+          left: 0 !important;
+          top: calc(932px + 467px * 2) !important;
+          width: 100%;
+          height: 451px;
+        }
+        .btn_wrap {
+          position: relative;
+          left: 0;
+          top: calc(467px * 5 + 165px);
+        }
+
+        footer {
+          padding: 30px 0 40px;
+          top: 2490px;
+        }
+
+        footer .inner {
+          width: calc(100% - 48px);
+          margin: 0 auto;
+        }
+
+        footer .top_row {
+          display: block;
+        }
+
+        footer .top_row .footer_link_area {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 46px;
+          padding-left: 0;
+          background: none;
+        }
+
+        footer .top_row .footer_link_area .link:nth-child(-n + 2) {
+          margin-top: 0;
+        }
+
+        footer .top_row .footer_link_area .link_personal_info {
+          margin-right: 0;
+          margin-top: 0px;
+          width: 50%;
+          font-size: 14px;
+        }
+
+        footer .top_row .footer_link_area .link {
+          margin-right: 0;
+          margin-top: 14px;
+          width: 50%;
+          font-size: 14px;
+        }
+
+        footer .top_row .footer_link_area .link_no_letterspacing {
+          margin-right: 0;
+          margin-top: 14px;
+          width: 50%;
+          font-size: 14px;
+        }
+
+        footer .select_box_div .btn_open {
+          width: 100%;
+        }
+
+        footer .select_box_div .list_wrap {
+          max-height: 250px;
+        }
+
+        footer .bot_row {
+          margin-top: 20px;
+          flex-wrap: wrap;
+        }
+
+        footer .bot_row .copyright_no_letterspacing {
+          order: 1;
+          margin-top: 8px;
+          width: 100%;
+        }
+
+        footer .bot_row .footer_sns_w {
+          justify-content: flex-start;
+        }
+
+        footer .bot_row .footer_sns_w .sns_list_youtube {
+          margin-right: 14px;
+          width: 26px;
+          height: 26px;
+          background-size: 26px 26px !important;
+        }
+
+        footer .bot_row .footer_sns_w .sns_list_instagram {
+          margin-right: 14px;
+          width: 26px;
+          height: 26px;
+          background-size: 26px 26px !important;
+        }
+
+        footer .bot_row .footer_sns_w .sns_list_facebook {
+          margin-right: 14px;
+          width: 26px;
+          height: 26px;
+          background-size: 26px 26px !important;
+        }
+
+        footer .bot_row .footer_sns_w .sns_list_blog {
+          margin-right: 14px;
+          width: 26px;
+          height: 26px;
+          background-size: 26px 26px !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="wrap">
       <!-- 상단 -->
       <header class="pc">
         <div class="logo">
-          <a href="#none" title="코오롱그룹메인으로 이동"> </a>
+          <a href="" title="코오롱그룹메인으로 이동"> </a>
         </div>
         <div>
           <div class="header_srch_area">
@@ -43,7 +488,7 @@
             <a href="#none" class="btn_close_srch_mo_active" title="검색 닫기"></a>
           </div>
         </div>
-        <a href="#none" class="only_mob_byn_open_mo_menu" title="메뉴 열기"></a>
+        <a href="#none" class="only_mob_btn_open_mo_menu" title="메뉴 열기"></a>
         <nav>
           <p class="inner_dimd"></p>
           <div class="for_bg">
@@ -51,7 +496,7 @@
               <ul class="gnb">
                 <li>
                   <a href="#none" class="one_depth"><span>코오롱 소개</span></a>
-                  <ul class="two_pack" style="display: none" style="display: none">
+                  <ul class="two_pack" style="display: none; height: 314px">
                     <li>
                       <a href="#none" class="two_depth">비전 & 가치</a>
                     </li>
@@ -165,7 +610,7 @@
               </div>
             </div>
             <div class="subsidiary_site_area">
-              <a href="#none" class="btn_open_subsidiary_site" title="계열사 목록 열기"></a>
+              <a href="#none" class="btn_open_subsidiary_site" title="계열사 목록 열기" onclick="btn_menu()"></a>
             </div>
             <form action="" style="display: none">
               <input type="text" name="_csrf" value="123qwe123" />
@@ -205,12 +650,18 @@
         <div class="main">
           <div class="inner">
             <div class="main_title_area">
-              <h1 class="main_title">코오롱과 함께하는 지속가능한 미래</h1>
+              <h1 class="main_title">코오롱과 함께하는 <br class="only_mobile" />지속가능한 미래</h1>
               <div class="main_recommend_txt_area">
                 <p>추천 검색어</p>
-                <div class="keyword_swiper">
-                  <div class="swiper_wrapper">
-                    <a href="#none" class="keyword_swiper_slide">코오롱</a>
+                <div class="keyword_swiper swiper mySwiper">
+                  <div class="swiper_wrapper swiper-wrapper">
+                    <a href="#none" class="keyword_swiper_slide swiper-slide"><span>윤리경영</span></a>
+                    <a href="#none" class="keyword_swiper_slide swiper-slide"><span>코오롱</span></a>
+                    <a href="#none" class="keyword_swiper_slide swiper-slide"><span>ESG경영</span></a>
+                    <a href="#none" class="keyword_swiper_slide swiper-slide"><span>헤리티지</span></a>
+                    <a href="#none" class="keyword_swiper_slide swiper-slide"><span>주요사업</span></a>
+                    <a href="#none" class="keyword_swiper_slide swiper-slide"><span>윤리경영</span></a>
+                    <a href="#none" class="keyword_swiper_slide swiper-slide"><span>코오롱</span></a>
                   </div>
                 </div>
               </div>
@@ -294,9 +745,21 @@
                   <div class="top_area">
                     <p class="category">주가정보</p>
                   </div>
-                  <div class="main_stock_swiper">
-                    <div class="swiper_wrapper">
-                      <div class="swiper_slide" style="width: 232px">
+                  <div class="main_stock_swiper swiper swiper-container mySwiper2" style="width: 100%">
+                    <div class="swiper_wrapper swiper-wrapper">
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="0">
+                        <p class="subsidiary_name">코오롱티슈진</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="0">
                         <p class="subsidiary_name">(주)코오롱</p>
                         <div class="stock_status_area">
                           <div class="left">
@@ -308,10 +771,142 @@
                           </div>
                         </div>
                       </div>
-                      <div class="swiper_button_next"></div>
-                      <div class="swiper_button_prev"></div>
-                      <span class="swiper_notification"></span>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="1">
+                        <p class="subsidiary_name">코오롱우</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="2">
+                        <p class="subsidiary_name">코오롱인더</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="3">
+                        <p class="subsidiary_name">코오롱인더우</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="4">
+                        <p class="subsidiary_name">코오롱글로벌</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="5">
+                        <p class="subsidiary_name">코오롱글로벌우</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="6">
+                        <p class="subsidiary_name">코오롱모빌리티</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="7">
+                        <p class="subsidiary_name">코오롱모빌리티우</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="8">
+                        <p class="subsidiary_name">코오롱생명과학</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="9">
+                        <p class="subsidiary_name">코오롱플라스틱</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="10">
+                        <p class="subsidiary_name">코오롱티슈진</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper_slide swiper-slide" data-swiper-slide-index="0">
+                        <p class="subsidiary_name">(주)코오롱</p>
+                        <div class="stock_status_area">
+                          <div class="left">
+                            <p class="stock_price_no_letterspacing">16,290</p>
+                            <p class="unit">원</p>
+                          </div>
+                          <div class="right">
+                            <p class="fluctuation_plus_no_letterspacing">100</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <span class="swiper_notification"></span>
                   </div>
                   <div class="btn_area">
                     <a href="#none" class="color_btn_black">
@@ -406,8 +1001,75 @@
                   </div>
                 </a>
               </div>
+              <div class="new_feed_card_list_w_e" style="display: none">
+                <a href="#none" class="grid_item" style="position: absolute; left: 0; top: 0">
+                  <div
+                    class="img_area"
+                    style="background-image: url(https://www.kolon.com/upload/files/2023/10/921bd826-dfd4-436b-873d-b868c6e978d7.jpg)"
+                  ></div>
+                  <div class="txt_area">
+                    <p class="category">코오롱플라스틱</p>
+                    <p class="list_title">코오롱플라스틱, 솔루션의 지속가능한 미래 제시</p>
+                    <div class="recommend_txt_wrap">
+                      <p class="keyword">#사업</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="grid_item" style="position: absolute; left: 305px; top: 0px">
+                  <div
+                    class="img_area"
+                    style="background-image: url(https://www.kolon.com/upload/files/2023/10/45fd4080-b11a-4cb6-95f8-5930f502c71a.jpg)"
+                  ></div>
+                  <div class="txt_area">
+                    <p class="category">코오롱그룹</p>
+                    <p class="list_title_no_lettercpacing">7년째 8천명의 설움 보듬은 상록야학 제23회 우정선...</p>
+                    <div class="recommend_txt_wrap">
+                      <p class="keyword">#나눔</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="grid_item_no_letterspacing" style="position: absolute; left: 610px; top: 0">
+                  <div
+                    class="img_area"
+                    style="background-image: url(https://www.kolon.com/upload/files/2023/09/46395459-6760-4191-87a3-2df1b0faafa6.jpg)"
+                  ></div>
+                  <div class="txt_area">
+                    <p class="category">코오롱인더스트리</p>
+                    <p class="list_title">코오롱인더스트리, 국내 부직포 업계 최초 '국제기준...</p>
+                    <div class="recommend_txt_wrap">
+                      <p class="keyword">#사업</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="grid_item" style="position: absolute; left: 0; top: 306px">
+                  <div
+                    class="img_area"
+                    style="background-image: url(https://www.kolon.com/upload/files/2023/09/786b6405-ba1a-4bec-8daa-7df4bd5f6f50.JPG)"
+                  ></div>
+                  <div class="txt_area" style="color: #000">
+                    <p class="category">코오롱글로벌</p>
+                    <p class="list_title_no_lettercpacing">코오롱글로벌, 국내 최초 BIM 기반 스마트 철근공사 ...</p>
+                    <div class="recommend_txt_wrap">
+                      <p class="keyword">#사업</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#none" class="grid_item_grid_item--width2" style="position: absolute; left: 305px; top: 306px">
+                  <div
+                    class="img_area"
+                    style="background-image: url(https://www.kolon.com/upload/files/2023/09/9b7f7900-2222-4bc9-99b5-e173b1c618c7.jpg)"
+                  ></div>
+                  <div class="txt_area">
+                    <p class="category">코오롱글로벌</p>
+                    <p class="list_title">코오롱글로벌, '그린수소 등 환경 분야 기술협력' 업무...</p>
+                    <div class="recommend_txt_wrap">
+                      <p class="keyword">#사업</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
               <div class="btn_wrap">
-                <a href="#none" class="color_btn_full" id="btnMore" style="display: block"><span>소식 더 보기</span></a>
+                <a href="#none" class="color_btn_full" id="btnMore" style="display: block" onclick="more_btn()"><span>소식 더 보기</span></a>
               </div>
             </div>
           </div>
@@ -466,5 +1128,36 @@
       <!-- //하단--끝 -->
     </div>
     <script src="/Javascript/kolon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination",
+          spaceBetween: 30,
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        loop: true,
+      });
+    </script>
+    <script>
+      var swiper2 = new Swiper(".mySwiper2", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
