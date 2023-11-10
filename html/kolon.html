@@ -130,12 +130,19 @@
           width: 100%;
           position: relative;
           left: 0;
+          display: block;
         }
 
         .main_title {
           font-size: 28px;
           line-height: 1.42;
           width: 435px;
+          bottom: 42px;
+        }
+
+        .keyword_swiper {
+          width: calc(100% - 85px);
+          height: 42px;
         }
 
         .only_mobile {
@@ -178,8 +185,12 @@
           font-size: 12px;
         }
 
-        .main_issue_card .grid_item_grid_item--width2_grid_item--height2 .text_area .list_title {
+        .grid_item_grid_item--width2_grid_item--height2 .text_area .list_title_no_lettercpacing {
           font-size: 20px;
+        }
+
+        .grid_item_grid_item--width2_grid_item--height2 .text_area .list_title_no_lettercpacing .only_mobile {
+          display: none;
         }
 
         .main_issue_card .grid_item_grid_item--width2_grid_item--height2 .text_area .recommend_txt_wrap .keywords {
@@ -212,7 +223,7 @@
           font-size: 12px;
         }
 
-        .main_issue_card .grid_item_no_letterspacing .text_area .list_title {
+        .main_issue_card .grid_item_no_letterspacing .text_area .list_title_no_lettercpacing {
           font-size: 20px;
         }
 
@@ -246,7 +257,7 @@
           font-size: 12px;
         }
 
-        .main_issue_card .grid_item_no_dimd_list .text_area .list_title {
+        .main_issue_card .grid_item_no_dimd_list .text_area .list_title_no_lettercpacing {
           font-size: 20px;
         }
 
@@ -261,7 +272,7 @@
           width: 100%;
         }
 
-        .main_issue_card .grid_item_no_dimd_list .text_area .list_title {
+        .main_issue_card .grid_item_no_dimd_list .text_area .list_title_no_lettercpacing {
           font-size: 20px;
         }
 
@@ -281,6 +292,15 @@
           top: 0;
         }
 
+        .main_issue_card .grid_item_grid_item--width3 .text_area {
+          padding: 0 20px 20px;
+          width: 100%;
+        }
+
+        .main_issue_card .grid_item_grid_item--width3 .text_area .list_title {
+          font-size: 20px;
+        }
+
         .main_content .main_quick_card_list_w {
           display: block;
           position: relative;
@@ -289,10 +309,23 @@
           width: 100%;
         }
 
+        .only_pc {
+          display: none;
+        }
+
         .main_content .main_quick_card_list_w .card_list_esg_management {
           margin-right: 30;
           width: 100%;
           height: 200px;
+        }
+
+        .main_content .main_quick_card_list_w .card_list_esg_management .top_area .category_no_letterspacing {
+          font-size: 12px;
+        }
+
+        .main_content .main_quick_card_list_w .card_list_esg_management .top_area .list_title_no_lettercpacing {
+          margin-top: 6px;
+          font-size: 18px;
         }
 
         .main_content .main_quick_card_list_w .card_list_employment_information {
@@ -301,16 +334,58 @@
           height: 200px;
         }
 
+        .main_content .main_quick_card_list_w .card_list_employment_information {
+          font-size: 12px;
+        }
+
+        .main_content .main_quick_card_list_w .card_list_employment_information .top_area .list_title_no_lettercpacing {
+          margin-top: 6px;
+          font-size: 18px;
+        }
+
+        .main_content .main_quick_card_list_w .card_list_employment_information .bot_area .sub_txt_no_letterspacing {
+          margin-bottom: 10px;
+          font-size: 12px;
+        }
+
         .main_content .main_quick_card_list_w .card_list_stock_information {
           margin-right: 30px;
           width: 100%;
           height: 200px;
         }
 
+        .main_content .main_quick_card_list_w .card_list_employment_information .top_area .category {
+          font-size: 12px;
+        }
+
+        .main_stock_swiper .swiper_wrapper .swiper_slide {
+          width: 407px;
+        }
+
+        .subsidiary_name {
+          margin-top: 48px !important;
+          margin-bottom: 2px !important;
+        }
+
+        .btn_area {
+          position: absolute;
+          left: 20px;
+          top: 155px;
+        }
+
         .main_content .main_quick_card_list_w .card_list_main_biz_feed {
           margin-right: 30px;
           width: 100%;
           height: 200px;
+        }
+
+        .main_content .main_quick_card_list_w .card_list_main_biz_feed .top_area .category {
+          font-size: 12px;
+        }
+
+        .main_content .main_quick_card_list_w .card_list_main_biz_feed .top_area .list_title_no_lettercpacing {
+          margin-top: 6px;
+          font-size: 18px;
         }
 
         .new_feed_card_list_w {
@@ -320,6 +395,24 @@
         .new_feed_card_list_w .grid_item {
           width: 100%;
           height: 451px;
+        }
+
+        .new_feed_card_list_w .grid_item .txt_area {
+          padding: 0 20px 20px;
+          width: 100%;
+        }
+
+        .new_feed_card_list_w .grid_item .txt_area .category {
+          margin-bottom: 6px;
+          font-size: 12px;
+        }
+
+        .new_feed_card_list_w .grid_item .txt_area .list_title {
+          font-size: 18px;
+        }
+
+        .new_feed_card_list_w .grid_item .recommend_txt_wrap {
+          font-size: 12px;
         }
 
         .new_feed_card_list_w a:nth-of-type(2) {
@@ -334,6 +427,24 @@
           height: 451px;
         }
 
+        .new_feed_card_list_w .grid_item_no_letterspacing .txt_area {
+          padding: 0 20px 20px;
+          width: 100%;
+        }
+
+        .new_feed_card_list_w .grid_item_no_letterspacing .txt_area .category {
+          margin-bottom: 6px;
+          font-size: 12px;
+        }
+
+        .new_feed_card_list_w .grid_item_no_letterspacing .txt_area .list_title {
+          font-size: 18px;
+        }
+
+        .new_feed_card_list_w .grid_item_no_letterspacing .recommend_txt_wrap .keyword {
+          font-size: 12px;
+        }
+
         .new_feed_card_list_w a:nth-of-type(4) {
           left: 0 !important;
           top: calc(932px + 467px) !important;
@@ -345,6 +456,25 @@
           width: 100%;
           height: 451px;
         }
+
+        .new_feed_card_list_w .grid_item_grid_item--width2 .txt_area {
+          padding: 0 20px 20px;
+          width: 100%;
+        }
+
+        .new_feed_card_list_w .grid_item_grid_item--width2 .txt_area .category {
+          margin-bottom: 6px;
+          font-size: 12px;
+        }
+
+        .new_feed_card_list_w .grid_item_grid_item--width2 .txt_area .list_title {
+          font-size: 18px;
+        }
+
+        .new_feed_card_list_w .grid_item_grid_item--width2 .recommend_txt_wrap .keyword {
+          font-size: 12px;
+        }
+
         .btn_wrap {
           position: relative;
           left: 0;
@@ -676,7 +806,7 @@
                   ></div>
                   <div class="text_area">
                     <p class="category">코오롱모빌리티그룹</p>
-                    <p class="list_title_no_lettercpacing">BMW본부, 신설 자회사 <br />'코오롱모터스'로 출범</p>
+                    <p class="list_title_no_lettercpacing">BMW본부, 신설 자회사 <br class="only_mobile" />'코오롱모터스'로 출범</p>
                     <div class="recommend_txt_wrap">
                       <p class="keywords">#사업</p>
                     </div>
@@ -717,7 +847,9 @@
                 <div class="card_list_esg_management">
                   <div class="top_area">
                     <p class="category_no_letterspacing">ESG경영</p>
-                    <p class="list_title_no_lettercpacing">환경을 위한 노력<br />사회를 위한 나눔<br />코오롱만의 ESG 경영</p>
+                    <p class="list_title_no_lettercpacing">
+                      환경을 위한 노력<br class="only_pc" class="only_pc" />사회를 위한 나눔<br class="only_pc" />코오롱만의 ESG 경영
+                    </p>
                   </div>
                   <div class="bot_area">
                     <a href="#none" class="color_btn_black">
@@ -730,10 +862,12 @@
                 <div class="card_list_employment_information">
                   <div class="top_area">
                     <p class="category">채용정보</p>
-                    <p class="list_title_no_lettercpacing">코오롱의<br />One&Only Way를<br />함께 걸어가실<br />인재를 찾습니다!</p>
+                    <p class="list_title_no_lettercpacing">
+                      코오롱의<br class="only_pc" />One&Only Way를<br class="only_pc" />함께 걸어가실<br class="only_pc" />인재를 찾습니다!
+                    </p>
                   </div>
                   <div class="bot_area">
-                    <p class="sub_txt_no_letterspacing">현재 5 건의<br />채용이 진행중입니다</p>
+                    <p class="sub_txt_no_letterspacing">현재 5 건의<br class="only_pc" />채용이 진행중입니다</p>
                     <a href="#none" class="border_btn">
                       <span>바로가기</span>
                     </a>
@@ -919,7 +1053,9 @@
                 <div class="card_list_main_biz_feed">
                   <div class="top_area">
                     <p class="category">주요 사업</p>
-                    <p class="list_title_no_lettercpacing">코오롱은<br />자율경영의 토대 위에서<br />ESG 가치를 실현하고<br />있습니다</p>
+                    <p class="list_title_no_lettercpacing">
+                      코오롱은<br class="only_pc" />자율경영의 토대 위에서<br class="only_pc" />ESG 가치를 실현하고<br class="only_pc" />있습니다
+                    </p>
                   </div>
                   <div class="bot_area">
                     <a href="#none" class="color_btn_black">
