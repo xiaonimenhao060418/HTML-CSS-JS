@@ -38,12 +38,12 @@ function btn_srch() {
     popArea.style.top = "60px";
     dimd.style.display = "block";
     scroll.style.overflow = "hidden";
-    changeimg.style.backgroundImage = 'url("/img/btn-close-gnb-search-menu.svg")';
+    changeimg.style.backgroundImage = 'url("https://www.kolon.com/common/kr/images/btn-close-gnb-search-menu.svg")';
   } else {
     popArea.style.top = "-350px";
     dimd.style.display = "none";
     scroll.style.overflow = "visible";
-    changeimg.style.backgroundImage = 'url("/img/btn-gnb-search-menu.svg")';
+    changeimg.style.backgroundImage = 'url("https://www.kolon.com/common/kr/images/btn-gnb-search-menu.svg")';
   }
 }
 
@@ -118,6 +118,7 @@ toggleButton();
 function more_btn() {
   const elements = document.querySelectorAll(".new_feed_card_list_w_e");
   const btn_more = document.querySelector(".btn_wrap");
+  const footer = document.querySelector("footer");
 
   elements.forEach(function (element) {
     const currentDisplay = window.getComputedStyle(element).getPropertyValue("display");
@@ -125,6 +126,10 @@ function more_btn() {
     if (currentDisplay === "none") {
       element.style.display = "block";
       btn_more.style.display = "none";
+
+      if (window.matchMedia("(max-width: 500px)").matches) {
+        footer.style.top = "4180px";
+      }
     } else {
       element.style.display = "none";
     }
