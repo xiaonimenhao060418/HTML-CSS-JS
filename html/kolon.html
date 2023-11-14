@@ -30,10 +30,6 @@
           display: none;
         }
 
-        .subsidiary_site_area {
-          display: none;
-        }
-
         .header_srch_area {
           right: calc(24px + 40px);
         }
@@ -118,6 +114,229 @@
           z-index: 1;
         }
 
+        header nav {
+          position: fixed;
+          top: 0;
+          left: 100%;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          z-index: 10;
+        }
+
+        header nav .inner_dimd {
+          display: none;
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: -1;
+        }
+
+        header nav .for_bg {
+          position: relative;
+          padding-top: 60px;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+        }
+
+        header nav .for_bg::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 24px;
+          top: 24px;
+          width: 98px;
+          height: 18px;
+          background: url(https://www.kolon.com/common/kr/images/logo-kolon-color.svg) center center/98px auto no-repeat;
+        }
+
+        header nav .gnb_w {
+          display: block;
+          height: 774px;
+          overflow-y: auto;
+        }
+
+        header nav .gnb {
+          display: block;
+          height: auto;
+        }
+
+        header .gnb_w .gnb > li {
+          min-width: unset;
+          width: 100%;
+          text-align: left;
+        }
+
+        header .gnb > li:first-child .one_depth {
+          padding-top: 24px;
+        }
+
+        header .gnb > li .one_depth {
+          justify-content: flex-start;
+          padding: 12px 24px;
+          height: auto;
+          font-size: 20px;
+        }
+
+        header .gnb > li .one_depth span {
+          position: relative;
+          padding-right: 20px;
+        }
+
+        header .gnb > li .one_depth span::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: auto;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%) rotate(0);
+          width: 14px;
+          height: 14px;
+          background: url(https://www.kolon.com/common/kr/images/btn-gnb-arrow-down-mo.svg) center center no-repeat;
+          transition: transform 0.3s ease;
+        }
+
+        header .gnb > li:first-child .two_pack {
+          border-left: 1px solid #e8eaed;
+        }
+
+        header .gnb > li .two_pack {
+          position: static;
+          transform: translateX(0);
+          padding: 4px 0 38px 34px;
+          border-right: 0;
+          height: auto !important;
+        }
+
+        header .gnb > li .two_pack > li:first-child {
+          margin-top: 0;
+        }
+
+        header .gnb > li .two_pack > li {
+          text-align: left;
+          margin-top: 10px;
+        }
+
+        header .gnb > li .two_pack > li .two_depth {
+          display: inline-block;
+          padding-right: 24px;
+          text-align: left;
+          font-size: 16px;
+        }
+
+        header .mobile_bot_fix_area {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding: 0 24px;
+          width: 100%;
+          height: 60px;
+          border: 1px solid #f9f9f9;
+          background-color: #fff;
+        }
+
+        header .header_lang_area {
+          display: flex;
+          align-items: center;
+          position: relative;
+          right: auto;
+          left: auto;
+          top: auto;
+          bottom: 0;
+          width: auto;
+          height: auto;
+        }
+
+        header .header_lang_area .btn_lang_cho {
+          position: relative;
+          margin-top: 0;
+        }
+
+        header .header_lang_area .lang_w {
+          display: flex;
+          position: relative;
+          left: auto;
+          top: auto;
+          transform: translate(0, 0);
+          max-width: 0px;
+          padding: 0;
+          width: auto;
+          height: 18px;
+          border: 0;
+          border-radius: 0;
+          transition: max-width 0.7s ease;
+        }
+
+        header .header_lang_area .lang_w .lang_list_on_no_letterspacing:first-child {
+          margin-left: 12px;
+        }
+
+        header .header_lang_area .lang_w .lang_list_on_no_letterspacing {
+          margin-right: 12px;
+          white-space: nowrap;
+        }
+
+        header .header_lang_area .lang_w .lang_list_no_letterspacing {
+          margin-top: 0;
+          margin-right: 12px;
+          white-space: nowrap;
+        }
+
+        header .subsidiary_site_area {
+          position: relative;
+          margin-left: 16px;
+          right: 0;
+          top: 0;
+        }
+
+        header .subsidiary_list_popup .for_bg {
+          padding: 110px 24px;
+        }
+
+        header .subsidiary_list_popup .for_bg .list_w {
+          flex-direction: row;
+          min-height: unset;
+          height: auto;
+        }
+
+        header .subsidiary_list_popup .for_bg .list_w .subsidiary_list {
+          width: 100%;
+          margin-bottom: 12px;
+          font-size: 30px;
+          line-height: 1.4;
+        }
+
+        header .subsidiary_list_popup .btn_close_subsidiary {
+          top: 20px;
+          right: 24px;
+          width: 20px;
+          height: 20px;
+          background-size: 20px 20px;
+        }
+
+        header .subsidiary_site_area .btn_open_subsidiary_site {
+          position: static;
+          display: block;
+          margin-top: 17px;
+        }
+
+        header nav .only_mob_byn_open_mo_menu {
+          position: absolute;
+          right: 24px;
+          top: 20px;
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: url(https://www.kolon.com/common/kr/images/btn-close-gnb-mo.svg);
+        }
+
         main {
           padding-top: 68px;
         }
@@ -131,12 +350,13 @@
           position: relative;
           left: 0;
           display: block;
+          margin-top: 60px;
         }
 
         .main_title {
           font-size: 28px;
           line-height: 1.42;
-          width: 435px;
+          width: 100%;
           bottom: 42px;
         }
 
@@ -666,6 +886,12 @@
           background-size: 26px 26px !important;
         }
       }
+
+      /* @media (hover: hover) {
+        .gnb_w .gnb:hover li {
+          min-width: 0;
+        }
+      } */
     </style>
   </head>
   <body>
@@ -705,8 +931,8 @@
             <a href="#none" class="btn_close_srch_mo_active" title="검색 닫기"></a>
           </div>
         </div>
-        <a href="#none" class="only_mob_btn_open_mo_menu" title="메뉴 열기"></a>
-        <nav>
+        <a href="#none" class="only_mob_btn_open_mo_menu" title="메뉴 열기" onclick="show()"></a>
+        <nav class="show">
           <p class="inner_dimd"></p>
           <div class="for_bg">
             <div class="gnb_w">
@@ -809,7 +1035,7 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="#none" class="one_depth">채용정보</a>
+                  <a href="#none" class="one_depth"><span>채용정보</span></a>
                   <ul class="two_pack" style="display: none">
                     <li>
                       <a href="#none" class="two_depth_menu_employ">채용정보</a>
@@ -818,21 +1044,23 @@
                 </li>
               </ul>
             </div>
-            <div class="header_lang_area">
-              <a href="#none" class="btn_lang_cho" title="언어 선택" onclick="btn_lang_cho()"> </a>
-              <div class="lang_w" style="display: none">
-                <a href="#none" class="lang_list_on_no_letterspacing">KOR</a>
-                <a href="#none" class="lang_list_no_letterspacing">ENG</a>
-                <a href="#none" class="lang_list_no_letterspacing">CHN</a>
+            <div class="mobile_bot_fix_area">
+              <div class="header_lang_area">
+                <a href="#none" class="btn_lang_cho" title="언어 선택" onclick="btn_lang_cho()"> </a>
+                <div class="lang_w" style="display: none">
+                  <a href="#none" class="lang_list_on_no_letterspacing">KOR</a>
+                  <a href="#none" class="lang_list_no_letterspacing">ENG</a>
+                  <a href="#none" class="lang_list_no_letterspacing">CHN</a>
+                </div>
               </div>
-            </div>
-            <div class="subsidiary_site_area">
-              <a href="#none" class="btn_open_subsidiary_site" title="계열사 목록 열기" onclick="btn_menu()"></a>
+              <div class="subsidiary_site_area">
+                <a href="#none" class="btn_open_subsidiary_site" title="계열사 목록 열기" onclick="btn_menu()"></a>
+              </div>
             </div>
             <form action="" style="display: none">
               <input type="text" name="_csrf" value="123qwe123" />
             </form>
-            <a href="#none" class="only_mob_byn_open_mo_menu" title="메뉴 닫기"></a>
+            <a href="#none" class="only_mob_byn_open_mo_menu" title="메뉴 닫기" onclick="show_close()"></a>
           </div>
         </nav>
         <div class="subsidiary_list_popup">

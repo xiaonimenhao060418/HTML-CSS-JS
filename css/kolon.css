@@ -74,6 +74,7 @@ header nav {
   height: 100%;
   text-align: center;
   background-color: #fff;
+  transition: left 0.5s ease;
 }
 
 header nav::before {
@@ -99,7 +100,7 @@ header nav::before {
   min-width: 140px;
 }
 
-.gnb_W .gnb {
+header .gnb {
   height: 60px;
   display: flex;
   overflow: hidden;

@@ -17,11 +17,18 @@ function btn_lang_cho() {
 
   elements.forEach(function (element) {
     const currentDisplay = window.getComputedStyle(element).getPropertyValue("display");
+    const screenWidth = window.innerWidth;
 
-    if (currentDisplay === "none") {
-      element.style.display = "block";
+    if (screenWidth <= 500) {
+      // 500px 이하에서는 초기에 클릭 시 display: flex;
+      element.style.display = currentDisplay === "none" ? "flex" : "none";
     } else {
-      element.style.display = "none";
+      // 500px 초과에서는 클릭할 때마다 toggle
+      if (currentDisplay === "none" || currentDisplay === "flex") {
+        element.style.display = "none";
+      } else {
+        element.style.display = "block";
+      }
     }
   });
 }
@@ -135,3 +142,64 @@ function more_btn() {
     }
   });
 }
+
+function show() {
+  const show = document.querySelector(".show");
+  const inner = document.querySelector(".inner_dimd");
+  const body = document.querySelector("body");
+  const lang = document.querySelector(".lang_w");
+
+  const element = window.getComputedStyle(show).getPropertyValue("left");
+
+  if (element === "100%") {
+    show.style.left = "0";
+    inner.style.display = "block";
+    body.style.position = "fixed";
+    lang.style.maxWidth = "300px";
+  } else {
+    show.style.left = "0";
+    inner.style.display = "block";
+    body.style.position = "fixed";
+    lang.style.maxWidth = "300px";
+  }
+}
+
+function show_close() {
+  const show = document.querySelector(".show");
+  const inner = document.querySelector(".inner_dimd");
+  const body = document.querySelector("body");
+  const lang = document.querySelector(".lang_w");
+
+  const element = window.getComputedStyle(show).getPropertyValue("left");
+
+  if (element === "0") {
+    show.style.left = "100%";
+    inner.style.display = "none";
+    body.style.position = "static";
+    lang.style.maxWidth = "0px";
+  } else {
+    show.style.left = "100%";
+    inner.style.display = "none";
+    body.style.position = "static";
+    lang.style.maxWidth = "0px";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const oneDepthElements = document.querySelectorAll(".one_depth");
+  const dropdownContents = document.querySelectorAll(".two_pack");
+
+  oneDepthElements.forEach(function (oneDepthElement, index) {
+    oneDepthElement.addEventListener("click", function () {
+      const dropdownContent = dropdownContents[index];
+
+      if (dropdownContent.style.display === "none" || dropdownContent.style.display === "") {
+        dropdownContent.style.display = "block";
+        dropdownContent.style.opacity = "1";
+      } else {
+        dropdownContent.style.display = "none";
+        dropdownContent.style.opacity = "0";
+      }
+    });
+  });
+});
